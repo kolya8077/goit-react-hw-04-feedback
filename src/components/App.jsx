@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { Buttons } from 'components/Buttons/Buttuns';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
@@ -9,7 +9,6 @@ export default function App() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-
 
   const ratingPlus = feedback => {
     switch (feedback) {
@@ -24,7 +23,7 @@ export default function App() {
       case 'bad':
         setBad(state => state + 1);
         break;
-      
+
       default:
         break;
     }
@@ -38,12 +37,8 @@ export default function App() {
     return Math.round((good * 100) / countTotalFeedback());
   };
 
-  console.log(countTotalFeedback());
   const feedback = { good, neutral, bad };
-
   const options = Object.keys(feedback);
-
-  console.log(good);
 
   return (
     <Container>
