@@ -23,7 +23,7 @@ export const Buttons = ({ options, ratingPlus }) => {
   );
 };
 
-Buttons.prototype = {
+Buttons.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   ratingPlus: PropTypes.func.isRequired,
 };
